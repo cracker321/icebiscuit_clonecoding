@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended", // TypeScript
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended" // prettier는 항상 마지막에 위치
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  //  "rules": {
+  //    "no-undef": "off"
+  //  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+      }
+    }
+  ]
+}
